@@ -1,0 +1,23 @@
+.mat-toolbar {
+    height: 64px; /* Set the height as per your design */
+  }
+
+  .mat-primary{
+    background-color: #a9dce3;
+    color:#7689de;
+    font-size: xx-large;
+    font-weight: bold;
+  }
+  
+  .spacer {
+    flex: 1; 
+  }
+  
+  .button.mat-button {
+    background: transparent;
+    color: #7689de;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+ 

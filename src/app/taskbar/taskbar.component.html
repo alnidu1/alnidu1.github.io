@@ -1,0 +1,32 @@
+<mat-sidenav-container fullscreen>
+
+    <mat-toolbar color="primary">
+      <span>Andy Profile</span>
+      <span class="spacer"></span>
+
+      <button mat-button (click)="homeButton()" style="background: transparent; color: #7689de;
+      font-size: 18px;" >Home</button>
+
+      <button mat-button (click)="aboutButton()" style="background: transparent;
+      color: #7689de;
+      font-size: 18px;">About Me</button>
+
+      <button mat-button (click)="educationButton()" style="background: transparent;
+      color: #7689de;
+      font-size: 18px;">Education & Skills</button>
+
+      <button mat-button (click)=" expButton()" style="background: transparent;
+      color: #7689de;
+      font-size: 18px;">Experiences</button>
+      <button mat-button (click)="projectButton() " style="background: transparent;
+      color: #7689de;
+      font-size: 18px;">Projects </button>
+    </mat-toolbar>
+  
+
+  
+  <router-outlet></router-outlet>
+  
+  </mat-sidenav-container>
+  
+  

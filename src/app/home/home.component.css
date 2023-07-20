@@ -1,0 +1,22 @@
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.content {
+  text-align: center;
+}
+
+.content img {
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.textbox{
+    padding: 70px;
+}
