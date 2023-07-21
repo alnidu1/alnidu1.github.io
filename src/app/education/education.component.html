@@ -2,29 +2,59 @@
 <html>
 <head>
     <title>Education and Skills</title>
-  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+        }
+
         .flex-container {
-    display: flex;
-}
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            max-width: 1000px;
+            gap: 20px;
+        }
 
-.left-div {
-    width: 50%;
-    padding: 10px;
-}
+        .left-div, .right-div {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-direction: column;
+        }
 
-.right-div {
-    width: 50%;
-    padding: 10px;
-}
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin-bottom: 20px;
+            max-width: 400px;
+            width: 100%;
+            background-color: #fff;
+            color: #333;
+        }
 
-summary {
+        .left-div .card {
+            background-color: #f1f1f1;
+            color: #000;
+        }
+
+        summary {
             cursor: pointer;
             outline: none;
-            font-size: 18px;
+            font-size: 20px;
             color: #7689de;
             display: inline-block;
-            margin-right: 5px; /* Add some spacing between the cursor and h3 */
+            margin-right: 5px;
         }
 
         details > div {
@@ -35,87 +65,106 @@ summary {
         h3 {
             display: inline-block;
             margin: 0;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .card h1 {
+            margin-top: 0;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .card h4 {
+            margin: 5px 0;
+        }
+
+        .card h4 a {
+            color: #7689de;
+            text-decoration: none;
+        }
+
+        .card h4 a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="flex-container">
         <div class="left-div">
-            <h1>Education</h1>
-            <img src="assets/image/utk_logo.png" height="100" width="150">
-
-                <h2>University of Tennessee- Knoxville</h2>
-                <h3>Sept 2016 - May 2020</h3>
-                    <br>
-
-                    <h3>Knoxville, TN</h3>
-                    <br>
-                    <h3>GPA: 3.6</h3>
+            <div class="card">
+                <img src="assets/image/utk_logo.png" height="100" width="150" alt="University Logo">
                 
+                <h3>University of Tennessee- Knoxville</h3>
+                <p>Sept 2016 - May 2020</p>
+                <p>Knoxville, TN</p>
+                <p>GPA: 3.6</p>
+            </div>
         </div>
 
         <div class="right-div">
-            <h1>Skill</h1>
+            <div class="card">
+                <h1>Skill</h1>
+                <details>
+                    <summary><mat-icon>navigate_next</mat-icon> Backend</summary>
+                    <div>
+                        <p>Python</p>
+                        <p>Java</p>
+                        <p>C++</p>
+                        <p>Spring</p>
+                        <p>Spring Boot</p>
+                        <p>ORM(Hibernate)</p>
+                    </div>
+                </details>
+                <details>
+                    <summary><mat-icon>navigate_next</mat-icon> DataBase</summary>
+                    <div>
+                        <p>Mysql</p>
+                        <p>Postgres</p>
+                        <p>H2</p>
+                    </div>
+                </details>
+    
+                <details>
+                    <summary><mat-icon>navigate_next</mat-icon> Cloud</summary>
+                    <div>
+                        <p>AWS</p>
+                    </div>
+                </details>
 
-            <details>
-                <summary><h3><mat-icon>navigate_next</mat-icon> Backend</h3></summary>
-                <div>
-                    <p>Python</p>
-                    <p>Java</p>
-                    <p>C++</p>
-                    <p>Spring</p>
-                    <p>Spring Boot</p>
-                    <p>ORM(Hibernate)</p>
-                </div>
-            </details>
+                <details>
+                    <summary><mat-icon>navigate_next</mat-icon> Frontend</summary>
+                    <div>
+                        <p>HTML and CSS</p>
+                        <p>Typescript</p>
+                        <p>Javascript</p>
+                        <p>Angular</p>
+                        <p>React</p>
+                        <p>Bootstrap</p>
+                    </div>
+                </details>
 
-            <details>
-                <summary><h3><mat-icon>navigate_next</mat-icon> Frontend</h3></summary>
-                <div>
-                    <p>HTML and CSS</p>
-                    <p>Typescript</p>
-                    <p>Javascript</p>
-                    <p>Angular</p>
-                    <p>React</p>
-                    <p>Bootstrap</p>
-                </div>
-            </details>
-
-            <details>
-                <summary><h3><mat-icon>navigate_next</mat-icon> DataBase</h3></summary>
-                <div>
-                    <p>Mysql</p>
-                    <p>Postgres</p>
-                    <p>H2</p>
-                </div>
-            </details>
-
-            <details>
-                <summary><h3><mat-icon>navigate_next</mat-icon> Cloud</h3></summary>
-                <div>
-                    <p>AWS</p>
-                </div>
-            </details>
-
-            <details>
-                <summary><h3><mat-icon>navigate_next</mat-icon> Other</h3></summary>
-                <div>
-                    
+                <details>
+                    <summary><mat-icon>navigate_next</mat-icon> Other</summary>
+                    <div>
                         <h4>Language</h4>
                         <div>
-                            <p> * Chinese(Mandarin, Cantonese, Fujianese)</p>
-                            <p> * English</p>
+                            <p>Chinese(Mandarin, Cantonese, Fujianese)</p>
+                            <p>English</p>
                         </div>
 
                         <h4>Microsoft Offices(Powerpoint, Word, Excel, Team, etc)</h4>
                         <h4>Communications, Customer Services, Time Management, and Positivity</h4>
-                       
-                    
                     </div>
-            </details>
+                </details>
+
+                <h1>Certificate</h1>
+                <p>Cogent University 2023</p>
+            </div>
         </div>
     </div>
-
-  
 </body>
 </html>

@@ -1,25 +1,65 @@
-
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
 }
 
 .content {
-  text-align: center;
+    display: flex;
+    max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for raised effect */
 }
 
-.content img {
-  display: block;
-  margin: 0 auto 20px;
+.left-column {
+    flex: 1;
+    background-color: #a9dce3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #7689de;
 }
 
-.textbox{
+.left-column img {
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+}
 
-    outline: 2px #83ccd6;
-    padding: 70px;
-    padding-top: 20px;
+.right-column {
+    flex: 2;
+    background-color: #fff;
+    padding: 20px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-column h1 {
+    margin-top: 0;
+}
+
+.right-column p {
+    text-align: justify;
+}
+
+.right-column h4 {
+    margin: 5px 0;
+}
+
+.right-column h4 a {
+    color: #7689de;
+    text-decoration: none;
+}
+
+.right-column h4 a:hover {
+    text-decoration: underline;
 }
