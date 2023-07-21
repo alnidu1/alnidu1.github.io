@@ -61,3 +61,15 @@ h3 {
 .card h4 a:hover {
     text-decoration: underline;
 }
+
+@media screen and (max-width: 900px) {
+    .mat-toolbar {
+        flex-wrap: wrap; 
+        justify-content: center; 
+        height: auto; 
+    }
+    
+    .button.mat-button {
+        margin: 5px; 
+    }
+}

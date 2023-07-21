@@ -1,16 +1,17 @@
-.mat-toolbar {
-    height: 64px; /* Set the height as per your design */
-  }
 
-  .mat-primary{
+.mat-toolbar {
+    height: 64px; 
+  }
+  
+  .mat-primary {
     background-color: #a9dce3;
-    color:#7689de;
+    color: #7689de;
     font-size: xx-large;
     font-weight: bold;
   }
   
   .spacer {
-    flex: 1; 
+    flex: 1;
   }
   
   .button.mat-button {
@@ -20,8 +21,20 @@
     font-weight: bold;
   }
   
-.active-button {
+  .active-button {
     background-color: #83ccd6;
     color: #fff;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .mat-toolbar {
+      flex-wrap: wrap; 
+      justify-content: center; 
+      height: auto; 
+    }
+    
+    .button.mat-button {
+      margin: 5px; 
+    }
   }
   

@@ -1,3 +1,14 @@
+@media screen and (max-width: 900px) {
+    .mat-toolbar {
+      flex-wrap: wrap; 
+      justify-content: center; 
+      height: auto; 
+    }
+    
+    .button.mat-button {
+      margin: 5px; 
+    }
+  }
 body {
     display: flex;
     justify-content: center;
@@ -63,3 +74,8 @@ body {
 .right-column h4 a:hover {
     text-decoration: underline;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
