@@ -18,5 +18,8 @@ body {
 }
 
 .textbox{
+
+    outline: 2px #83ccd6;
     padding: 70px;
+    padding-top: 20px;
 }

@@ -20,4 +20,8 @@
     font-weight: bold;
   }
   
- 
+.active-button {
+    background-color: #83ccd6;
+    color: #fff;
+  }
+  

@@ -1,0 +1,25 @@
+.flex-container {
+    display: flex;
+}
+
+.left-div {
+    width: 50%;
+    padding: 10px;
+}
+
+.right-div {
+    width: 50%;
+    padding: 10px;
+}
+
+summary {
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+    color: #7689de;
+}
+
+details > div {
+    margin: 0;
+    padding: 10px;
+}

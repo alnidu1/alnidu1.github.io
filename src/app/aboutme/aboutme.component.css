@@ -1,0 +1,13 @@
+   /* ... Your existing CSS styles ... */
+        /* Additional styles for the dropdowns */
+        summary {
+            cursor: pointer;
+            outline: none;
+            font-size: 18px;
+            color: #7689de;
+        }
+
+        details > p {
+            margin: 0;
+            padding: 10px;
+        }
