@@ -9,6 +9,7 @@
   --purple-dark: #5738c8;
   --lime: #d9fa5a;
   --orange: #ff9a67;
+  --ut-orange: #ff8200;
   --sans: 'Segoe UI', Arial, sans-serif;
 }
 
@@ -26,7 +27,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 15px;
+  font-size: clamp(15px, 1vw, 17px);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
@@ -38,6 +39,30 @@ a {
 a:focus-visible {
   outline: 3px solid #ad9aff;
   outline-offset: 4px;
+}
+
+.scroll-animations-ready [data-scroll-reveal="pending"] {
+  visibility: hidden;
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+}
+
+[data-scroll-reveal] {
+  transition: opacity .65s ease, transform .65s cubic-bezier(.2, .7, .2, 1), visibility .65s;
+}
+
+.scroll-animations-ready [data-scroll-reveal="visible"] {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.skill-card:nth-child(2) {
+  transition-delay: 80ms;
+}
+
+.skill-card:nth-child(3) {
+  transition-delay: 160ms;
 }
 
 .container {
@@ -65,6 +90,7 @@ a:focus-visible {
 .brand {
   display: inline-flex;
   align-items: center;
+  flex-shrink: 0;
   gap: 10px;
   color: var(--ink);
   text-decoration: none;
@@ -91,12 +117,13 @@ a:focus-visible {
   font-size: 12px;
   font-weight: 800;
   letter-spacing: .08em;
+  white-space: nowrap;
 }
 
 .brand-name span {
   margin-left: 6px;
-  color: #8a8996;
-  font-size: 9px;
+  color: #777685;
+  font-size: clamp(9px, .8vw, 11px);
   font-weight: 600;
   letter-spacing: .07em;
 }
@@ -128,7 +155,7 @@ a:focus-visible {
   border-radius: 999px;
   padding: 0 14px;
   color: var(--ink);
-  font-size: 10px;
+  font-size: clamp(11px, .85vw, 12px);
   font-weight: 700;
   text-decoration: none;
   transition: background .18s ease, border-color .18s ease;
@@ -141,6 +168,22 @@ a:focus-visible {
 
 .header-contact span {
   color: var(--purple);
+}
+
+.social-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  fill: currentColor;
+}
+
+.social-icon-mail {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
 }
 
 .hero {
@@ -197,7 +240,7 @@ a:focus-visible {
   gap: 9px;
   margin: 0 0 17px;
   color: #9896a9;
-  font-size: 9px;
+  font-size: clamp(10px, .8vw, 11px);
   font-weight: 750;
   letter-spacing: .14em;
   line-height: 1.5;
@@ -233,8 +276,8 @@ a:focus-visible {
   max-width: 440px;
   margin: 22px 0 0;
   color: #bbb9c7;
-  font-size: 13px;
-  line-height: 1.85;
+  font-size: clamp(14px, 1.1vw, 16px);
+  line-height: 1.8;
 }
 
 .hero-button {
@@ -247,7 +290,7 @@ a:focus-visible {
   padding: 0 15px;
   background: var(--lime);
   color: var(--ink);
-  font-size: 10px;
+  font-size: clamp(12px, .9vw, 14px);
   font-weight: 800;
   text-decoration: none;
   transition: transform .18s ease, background .18s ease;
@@ -260,13 +303,17 @@ a:focus-visible {
 
 .hero-socials {
   display: flex;
-  gap: 18px;
+  flex-wrap: wrap;
+  gap: 16px;
   margin-top: 27px;
 }
 
 .hero-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   color: #9693a7;
-  font-size: 9px;
+  font-size: clamp(12px, .9vw, 14px);
   font-weight: 600;
   text-decoration: none;
 }
@@ -275,8 +322,7 @@ a:focus-visible {
   color: white;
 }
 
-.hero-socials span {
-  margin-left: 3px;
+.hero-socials .social-icon {
   color: var(--lime);
 }
 
@@ -350,7 +396,7 @@ a:focus-visible {
   right: 7px;
   bottom: 0;
   color: #aaa7b6;
-  font-size: 8px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: .13em;
 }
@@ -381,7 +427,7 @@ a:focus-visible {
   gap: 10px;
   margin-bottom: 14px;
   color: var(--purple);
-  font-size: 9px;
+  font-size: clamp(10px, .8vw, 11px);
 }
 
 .section-kicker > span {
@@ -414,7 +460,7 @@ a:focus-visible {
 .intro-copy p {
   margin: 0 0 13px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: clamp(14px, 1vw, 16px);
   line-height: 1.9;
 }
 
@@ -422,7 +468,7 @@ a:focus-visible {
   display: inline-block;
   margin-top: 4px;
   color: var(--purple-dark);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 750;
   text-decoration: none;
 }
@@ -454,7 +500,7 @@ a:focus-visible {
 .skills-heading-note {
   margin: 0 0 5px;
   color: var(--muted);
-  font-size: 10px;
+  font-size: clamp(12px, .9vw, 13px);
 }
 
 .experience-card {
@@ -479,7 +525,7 @@ a:focus-visible {
   align-items: center;
   gap: 8px;
   color: #8b8999;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 750;
   letter-spacing: .1em;
 }
@@ -494,7 +540,7 @@ a:focus-visible {
 
 .experience-main {
   display: grid;
-  grid-template-columns: .8fr 1.2fr;
+  grid-template-columns: minmax(190px, .8fr) minmax(0, 1.2fr);
   gap: 35px;
   padding-top: 21px;
 }
@@ -502,39 +548,38 @@ a:focus-visible {
 .experience-company {
   display: flex;
   align-items: center;
+  flex-direction: column;
   gap: 13px;
+  text-align: center;
 }
 
 .company-mark {
   display: grid;
-  width: 48px;
-  height: 48px;
-  flex: 0 0 48px;
+  width: min(100%, 158px);
+  height: 38px;
+  flex: 0 0 38px;
   place-items: center;
-  border: 1px solid #e7e5ed;
-  border-radius: 9px;
-  background: #fff;
-  padding: 5px;
+  padding: 0;
 }
 
 .company-mark img {
   display: block;
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
 .experience-company h3 {
   margin: 0;
   color: var(--ink);
-  font-size: 13px;
+  font-size: clamp(14px, 1.1vw, 16px);
   line-height: 1.4;
 }
 
 .experience-company p {
   margin: 4px 0 0;
   color: var(--purple-dark);
-  font-size: 10px;
+  font-size: clamp(11px, .9vw, 12px);
   font-weight: 650;
 }
 
@@ -545,7 +590,7 @@ a:focus-visible {
 .experience-description > p,
 .experience-description li {
   color: var(--muted);
-  font-size: 10px;
+  font-size: clamp(12px, .95vw, 14px);
   line-height: 1.8;
 }
 
@@ -580,7 +625,7 @@ a:focus-visible {
   padding: 5px 8px;
   background: #f0edff;
   color: #5b45bd;
-  font-size: 8px;
+  font-size: clamp(9px, .75vw, 10px);
   font-weight: 750;
   letter-spacing: .03em;
 }
@@ -641,13 +686,13 @@ a:focus-visible {
 .skill-card h3 {
   margin: 25px 0 0;
   color: var(--ink);
-  font-size: 13px;
+  font-size: clamp(15px, 1.15vw, 17px);
 }
 
 .skill-card p {
   margin: 6px 0 0;
   color: #5f5c6c;
-  font-size: 9px;
+  font-size: clamp(12px, .95vw, 14px);
   line-height: 1.8;
 }
 
@@ -673,10 +718,14 @@ a:focus-visible {
   color: var(--purple);
 }
 
+.education-copy h2 .ut-orange {
+  color: var(--ut-orange);
+}
+
 .education-copy > p:last-child {
   margin: 14px 0 0;
   color: #696977;
-  font-size: 11px;
+  font-size: clamp(13px, .95vw, 15px);
   line-height: 1.8;
 }
 
@@ -705,7 +754,7 @@ a:focus-visible {
   right: 210px;
   bottom: 25px;
   color: #99969c;
-  font-size: 7px;
+  font-size: 8px;
   font-weight: 750;
   letter-spacing: .13em;
 }
@@ -766,12 +815,12 @@ a:focus-visible {
   display: inline-flex;
   min-height: 45px;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   border: 1px solid rgba(255, 255, 255, .55);
   border-radius: 5px;
   padding: 0 15px;
   color: white;
-  font-size: 10px;
+  font-size: clamp(12px, .9vw, 14px);
   font-weight: 700;
   text-decoration: none;
   transition: color .18s ease, background .18s ease;
@@ -803,7 +852,7 @@ a:focus-visible {
   gap: 20px;
   border-top: 1px solid var(--line);
   color: #858391;
-  font-size: 8px;
+  font-size: 11px;
 }
 
 .footer-brand {
@@ -820,7 +869,7 @@ a:focus-visible {
 
 .footer-inner > a:last-child {
   color: #6d6a7b;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 750;
   letter-spacing: .07em;
   text-decoration: none;
@@ -833,8 +882,9 @@ a:focus-visible {
 @media (max-width: 760px) {
   .hero-card {
     min-height: 485px;
-    grid-template-columns: minmax(0, 1fr) 235px;
-    gap: 28px;
+    grid-template-columns: minmax(0, 1fr) minmax(210px, 235px);
+    gap: 22px;
+    padding-inline: 30px;
   }
 
   .hero h1 {
@@ -843,6 +893,7 @@ a:focus-visible {
 
   .hero-visual {
     width: 215px;
+    min-width: 0;
   }
 
   .profile-image {
@@ -851,6 +902,11 @@ a:focus-visible {
 
   .experience-main {
     gap: 22px;
+  }
+
+  .experience-description > p,
+  .experience-description li {
+    font-size: 13px;
   }
 
   .education-school {
@@ -872,23 +928,28 @@ a:focus-visible {
     gap: 9px;
   }
 
+  .brand-name {
+    font-size: 11px;
+    letter-spacing: .06em;
+  }
+
   .brand-name span {
     display: none;
   }
 
   .main-nav {
-    gap: 13px;
+    gap: 8px;
   }
 
   .main-nav a {
-    font-size: 9px;
+    font-size: 10px;
   }
 
   .header-contact {
     min-height: 33px;
-    gap: 7px;
-    padding: 0 10px;
-    font-size: 9px;
+    gap: 6px;
+    padding: 0 8px;
+    font-size: 10px;
   }
 
   .hero {
@@ -919,7 +980,7 @@ a:focus-visible {
 
   .hero-kicker {
     flex-wrap: wrap;
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .hero h1 {
@@ -928,7 +989,7 @@ a:focus-visible {
 
   .hero-summary {
     margin-top: 17px;
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .hero-button {
@@ -982,7 +1043,7 @@ a:focus-visible {
   }
 
   .intro-copy p {
-    font-size: 11px;
+    font-size: 14px;
   }
 
   .section-header {
@@ -1000,17 +1061,27 @@ a:focus-visible {
     gap: 18px;
   }
 
+  .experience-company {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
   .experience-topline {
     gap: 8px;
   }
 
   .experience-label,
   .experience-date {
-    font-size: 7px;
+    font-size: 10px;
   }
 
   .experience-description li {
-    font-size: 9px;
+    font-size: 13px;
+  }
+
+  .experience-tools span {
+    font-size: 10px;
   }
 
   .skills-section {
@@ -1095,16 +1166,26 @@ a:focus-visible {
 
   .contact-button {
     min-height: 40px;
-    font-size: 9px;
+    font-size: 11px;
   }
 
   .footer-inner {
     gap: 10px;
-    font-size: 7px;
+    font-size: 10px;
   }
 
   .footer-inner > a:last-child {
-    font-size: 7px;
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 360px) {
+  .brand-name {
+    display: none;
+  }
+
+  .header-inner {
+    gap: 8px;
   }
 }
 
