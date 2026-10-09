@@ -97,22 +97,32 @@ a:focus-visible {
 }
 
 .brand-symbol {
-  display: inline-flex;
+  display: block;
   width: 34px;
   height: 34px;
-  align-items: baseline;
-  justify-content: center;
-  border-radius: 10px;
-  background: var(--purple);
-  color: white;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: -.06em;
-  line-height: 1;
+  flex: 0 0 34px;
 }
 
-.brand-symbol span {
-  color: var(--lime);
+.hero-resume-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, .35);
+  border-radius: 5px;
+  padding: 0 15px;
+  color: white;
+  font-size: clamp(12px, .9vw, 14px);
+  font-weight: 750;
+  text-decoration: none;
+  transition: background .18s ease, border-color .18s ease;
+}
+
+.hero-resume-link:hover {
+  border-color: rgba(255, 255, 255, .75);
+  background: rgba(255, 255, 255, .1);
+  color: white;
 }
 
 .brand-name {
@@ -124,7 +134,7 @@ a:focus-visible {
 
 .brand-name span {
   margin-left: 6px;
-  color: #777685;
+  color: #696777;
   font-size: clamp(9px, .8vw, 11px);
   font-weight: 600;
   letter-spacing: .07em;
@@ -137,6 +147,9 @@ a:focus-visible {
 }
 
 .main-nav a {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
   color: #666575;
   font-size: 11px;
   font-weight: 650;
@@ -270,10 +283,6 @@ a:focus-visible {
   line-height: .99;
 }
 
-.hero h1 span {
-  color: var(--lime);
-}
-
 .hero-summary {
   max-width: 440px;
   margin: 22px 0 0;
@@ -287,7 +296,7 @@ a:focus-visible {
   min-height: 44px;
   align-items: center;
   gap: 16px;
-  margin-top: 26px;
+  margin: 0;
   border-radius: 5px;
   padding: 0 15px;
   background: var(--lime);
@@ -303,6 +312,14 @@ a:focus-visible {
   background: #e5ff83;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 11px;
+  margin-top: 26px;
+}
+
 .hero-socials {
   display: flex;
   flex-wrap: wrap;
@@ -312,6 +329,7 @@ a:focus-visible {
 
 .hero-socials a {
   display: inline-flex;
+  min-height: 36px;
   align-items: center;
   gap: 7px;
   color: #9693a7;
@@ -483,6 +501,45 @@ a:focus-visible {
   background: #eeedf7;
 }
 
+.projects-section {
+  background: var(--paper);
+}
+
+.project-empty-state {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border: 1px dashed #d8d3e7;
+  border-radius: 10px;
+  padding: 23px 25px;
+  background: #fff;
+}
+
+.project-empty-mark {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  place-items: center;
+  border-radius: 10px;
+  background: #e8e2ff;
+  color: var(--purple-dark);
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.project-empty-state h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(15px, 1.2vw, 18px);
+}
+
+.project-empty-state p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: clamp(13px, .95vw, 15px);
+}
+
 .section-header {
   display: flex;
   align-items: end;
@@ -493,10 +550,6 @@ a:focus-visible {
 
 .section-heading {
   font-size: clamp(35px, 4vw, 45px) !important;
-}
-
-.section-heading span {
-  color: var(--purple);
 }
 
 .skills-heading-note {
@@ -526,7 +579,7 @@ a:focus-visible {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #8b8999;
+  color: #666475;
   font-size: 10px;
   font-weight: 750;
   letter-spacing: .1em;
@@ -751,16 +804,6 @@ a:focus-visible {
   object-fit: contain;
 }
 
-.education-school {
-  position: absolute;
-  right: 210px;
-  bottom: 25px;
-  color: #99969c;
-  font-size: 8px;
-  font-weight: 750;
-  letter-spacing: .13em;
-}
-
 .contact-section {
   padding-top: 0;
   background: var(--paper);
@@ -815,6 +858,7 @@ a:focus-visible {
   position: relative;
   z-index: 1;
   display: inline-flex;
+  min-height: 36px;
   min-height: 45px;
   align-items: center;
   gap: 10px;
@@ -850,35 +894,11 @@ a:focus-visible {
   display: flex;
   min-height: 55px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
   border-top: 1px solid var(--line);
-  color: #858391;
+  color: #696777;
   font-size: 11px;
-}
-
-.footer-brand {
-  color: var(--ink);
-  font-size: 15px;
-  font-weight: 850;
-  letter-spacing: -.07em;
-  text-decoration: none;
-}
-
-.footer-brand span {
-  color: var(--purple);
-}
-
-.footer-inner > a:last-child {
-  color: #6d6a7b;
-  font-size: 10px;
-  font-weight: 750;
-  letter-spacing: .07em;
-  text-decoration: none;
-}
-
-.footer-inner > a:last-child:hover {
-  color: var(--purple);
 }
 
 @media (max-width: 760px) {
@@ -911,9 +931,6 @@ a:focus-visible {
     font-size: 13px;
   }
 
-  .education-school {
-    right: 174px;
-  }
 }
 
 @media (max-width: 580px) {
@@ -940,11 +957,11 @@ a:focus-visible {
   }
 
   .main-nav {
-    gap: 8px;
+    gap: 6px;
   }
 
   .main-nav a {
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .header-contact {
@@ -952,6 +969,10 @@ a:focus-visible {
     gap: 6px;
     padding: 0 8px;
     font-size: 10px;
+  }
+
+  .header-contact .social-icon {
+    display: none;
   }
 
   .hero {
@@ -994,7 +1015,7 @@ a:focus-visible {
     font-size: 15px;
   }
 
-  .hero-button {
+  .hero-actions {
     margin-top: 20px;
   }
 
@@ -1136,14 +1157,6 @@ a:focus-visible {
     height: 48px;
   }
 
-  .education-school {
-    right: 120px;
-    bottom: 39px;
-    max-width: 120px;
-    font-size: 6px;
-    text-align: right;
-  }
-
   .contact-section {
     padding-top: 0;
   }
@@ -1176,8 +1189,19 @@ a:focus-visible {
     font-size: 10px;
   }
 
-  .footer-inner > a:last-child {
-    font-size: 9px;
+}
+
+@media (max-width: 580px) {
+  .project-empty-state {
+    align-items: flex-start;
+    gap: 13px;
+    padding: 18px 16px;
+  }
+
+  .project-empty-mark {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
   }
 }
 

@@ -21,6 +21,22 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('.hero h1')?.textContent).toContain('Hey, I’m');
   });
 
+  it('should link to projects and the resume PDF', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+
+    expect(compiled.querySelector('.main-nav a[href="#projects"]')?.textContent).toContain('Projects');
+    expect(compiled.querySelector('#projects h2')?.textContent).toContain('Projects');
+    expect(compiled.querySelector('.hero-resume-link')?.textContent).toContain('Resume');
+    expect(compiled.querySelector('.hero-resume-link')?.getAttribute('href'))
+      .toBe('assets/andy-liu-resume.pdf');
+    expect(compiled.querySelector('.hero-resume-link')?.getAttribute('target')).toBe('_blank');
+    expect(compiled.querySelector('.brand-symbol text')?.textContent).toBe('A');
+    expect(compiled.querySelector('.brand-symbol text')?.getAttribute('x')).toBe('17');
+    expect(compiled.querySelector('.brand-symbol circle')).toBeNull();
+  });
+
   it('should render accessible LinkedIn, GitHub, and email links with icons', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
