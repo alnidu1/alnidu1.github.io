@@ -37,6 +37,21 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('.brand-symbol circle')).toBeNull();
   });
 
+  it('should keep education and contact section labels outside their cards', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    const education = compiled.querySelector('#education');
+    const contact = compiled.querySelector('#contact');
+
+    expect(education?.querySelector('.education-card .education-copy h2')?.textContent).toContain('Go Vols');
+    expect(education?.querySelector('.education-card .section-kicker')).toBeNull();
+    expect(contact?.querySelector('.contact-card h2')?.textContent).toContain('Got a good one?');
+    expect(contact?.querySelector('.contact-card .section-kicker')).toBeNull();
+    expect(contact?.querySelector(':scope > .container > .section-header .section-kicker')?.textContent)
+      .toContain('YOUR TURN');
+  });
+
   it('should render accessible LinkedIn, GitHub, and email links with icons', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
