@@ -1,4 +1,170 @@
-<app-taskbar></app-taskbar>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#home" aria-label="Andy Liu home">
+      <span class="brand-symbol" aria-hidden="true">A<span>.</span></span>
+      <span class="brand-name">ANDY LIU <span>/ SOFTWARE ENGINEER</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+    </nav>
+    <a class="header-contact" href="mailto:liuandy246@gmail.com">Say hello <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
 
+<main id="home">
+  <section class="hero">
+    <div class="container hero-card">
+      <div class="hero-orbit hero-orbit-one" aria-hidden="true"></div>
+      <div class="hero-orbit hero-orbit-two" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="hero-kicker"><span class="availability-dot"></span> Based in Tennessee <span class="kicker-divider">/</span> Building everywhere</p>
+        <h1>Hey, I’m<br>Andy Liu<span class="hero-period">.</span></h1>
+        <p class="hero-summary">
+          Software engineer making the complicated feel simple.
+          I build applications and the cloud systems that keep them running.
+        </p>
+        <a class="hero-button" href="#experience">See what I do <span aria-hidden="true">↓</span></a>
+        <div class="hero-socials" aria-label="Contact links">
+          <a href="https://github.com/alnidu1" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="mailto:liuandy246@gmail.com">Email <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="photo-backdrop" aria-hidden="true"><span>HELLO!</span></div>
+        <img
+          class="profile-image"
+          src="assets/image/andy_suit.PNG"
+          alt="Andy Liu wearing a suit"
+          width="340"
+          height="400">
+        <div class="photo-sticker"><span>✳</span> NICE TO<br>MEET YOU</div>
+        <span class="photo-caption">YOUR PHOTO GOES HERE</span>
+      </div>
+      <span class="hero-index" aria-hidden="true">PORTFOLIO · 2026</span>
+    </div>
+  </section>
 
+  <section class="intro-section" id="about">
+    <div class="container intro-grid">
+      <div>
+        <p class="section-kicker"><span>01</span> A LITTLE ABOUT ME</p>
+        <h2>I like making<br><span>things work better.</span></h2>
+      </div>
+      <div class="intro-copy">
+        <p>
+          I’m a software developer who likes seeing the full picture: the application,
+          the infrastructure it runs on, and the people who depend on it. At Fastenal,
+          I work across Java services, APIs, cloud platforms, and delivery pipelines.
+        </p>
+        <p>Off the clock: tennis, puzzles, games, and anime. Usually one at a time.</p>
+        <a class="inline-link" href="mailto:liuandy246@gmail.com">More about me <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
 
+  <section class="experience-section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <p class="section-kicker"><span>02</span> WHERE I’VE BEEN</p>
+          <h2 class="section-heading">The work stuff<span>.</span></h2>
+        </div>
+        <div class="section-doodle" aria-hidden="true">✳</div>
+      </div>
+
+      <article class="experience-card">
+        <div class="experience-topline">
+          <span class="experience-label"><span class="timeline-dot"></span> CURRENT ROLE</span>
+          <span class="experience-date">AUG 2023 — NOW</span>
+        </div>
+        <div class="experience-main">
+          <div class="experience-company">
+            <div class="company-mark"><img src="assets/image/fastenal_logo.png" alt="Fastenal logo" width="54" height="54"></div>
+            <div>
+              <h3>Software Developer</h3>
+              <p>Fastenal <span>·</span> Enterprise software</p>
+            </div>
+          </div>
+          <div class="experience-description">
+            <p>I help modernize business applications and build the infrastructure behind reliable releases.</p>
+            <ul>
+              <li>Moved legacy Tomcat and EAP applications toward Spring Boot microservices.</li>
+              <li>Built REST APIs, Liquibase validation, and Azure DevOps delivery pipelines.</li>
+              <li>Provisioned cloud infrastructure with Terraform and supported container deployments.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="experience-tools">
+          <span>JAVA</span><span>SPRING BOOT</span><span>AZURE</span><span>TERRAFORM</span><span>DOCKER</span><span>ORACLE SQL</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <p class="section-kicker"><span>03</span> THE TOOLBOX</p>
+          <h2 class="section-heading">Things I work with<span>.</span></h2>
+        </div>
+        <p class="skills-heading-note">A practical toolkit, built over time.</p>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card skill-card-purple">
+          <span class="skill-number">01</span>
+          <span class="skill-icon" aria-hidden="true">&lt;/&gt;</span>
+          <h3>Languages</h3>
+          <p>Java · Python · C++<br>JavaScript · TypeScript · SQL · Bash</p>
+        </article>
+        <article class="skill-card skill-card-lime">
+          <span class="skill-number">02</span>
+          <span class="skill-icon" aria-hidden="true">▧</span>
+          <h3>Cloud &amp; DevOps</h3>
+          <p>Azure · AWS · Terraform<br>Docker · Azure DevOps · CI/CD</p>
+        </article>
+        <article class="skill-card skill-card-orange">
+          <span class="skill-number">03</span>
+          <span class="skill-icon" aria-hidden="true">✳</span>
+          <h3>Frameworks &amp; data</h3>
+          <p>Spring Boot · Angular · Flutter<br>Oracle · PostgreSQL · MySQL</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="education-section" id="education">
+    <div class="container education-card">
+      <div class="education-copy">
+        <p class="section-kicker"><span>04</span> THE FOUNDATION</p>
+        <h2>Go <span>Vols.</span></h2>
+        <p>B.S. in Computer Science · May 2020<br>GPA 3.6 · Knoxville, Tennessee</p>
+      </div>
+      <div class="education-logo">
+        <img src="assets/image/utk_logo.png" alt="University of Tennessee" width="100" height="82">
+      </div>
+      <span class="education-school">UNIVERSITY OF TENNESSEE · KNOXVILLE</span>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="container contact-card">
+      <div>
+        <p class="section-kicker"><span>05</span> YOUR TURN</p>
+        <h2>Got a good one?<br><span>Let’s talk.</span></h2>
+      </div>
+      <a class="contact-button" href="mailto:liuandy246@gmail.com">liuandy246@gmail.com <span aria-hidden="true">↗</span></a>
+      <span class="contact-spark" aria-hidden="true">✳</span>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a class="footer-brand" href="#home">AL<span>.</span></a>
+    <span>Made with care in Tennessee · <span>{{ currentYear }}</span></span>
+    <a href="#home">BACK TO TOP ↑</a>
+  </div>
+</footer>

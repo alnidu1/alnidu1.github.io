@@ -1,27 +1,27 @@
-# Profile
-https://alnidu1.github.io/
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+# Andy Liu — Personal Portfolio
 
-## Development server
+Personal portfolio site for [alnidu1.github.io](https://alnidu1.github.io/), built with Angular.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Development
 
-## Code scaffolding
+Run `npm install` once, then start the local development server:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```sh
+npm start
+```
 
-## Build
+Create a production build with:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```sh
+npm run build
+```
 
-## Running unit tests
+The production output is written to `docs/` for GitHub Pages.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Profile photo
 
-## Running end-to-end tests
+The portfolio uses `src/assets/image/andy_suit.PNG`. To change the photo, replace that file and keep its name, or update the image path in `src/app/app.component.html`.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Updating site content
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The portfolio sections are in `src/app/app.component.html`; site colors and responsive styles are in `src/styles.css`.

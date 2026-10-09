@@ -14,16 +14,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'profile'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('profile');
-  });
-
-  it('should render title', () => {
+  it('should render the portfolio introduction', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('profile app is running!');
+    expect(compiled.querySelector('.hero h1')?.textContent).toContain('Hi, I’m Andy Liu');
   });
 });
