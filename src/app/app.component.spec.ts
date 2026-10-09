@@ -52,6 +52,17 @@ describe('AppComponent', () => {
       .toContain('YOUR TURN');
   });
 
+  it('should render a matching icon for each skills card', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const cards = fixture.nativeElement.querySelectorAll('.skill-card');
+
+    expect(cards.length).toBe(3);
+    for (const card of Array.from(cards)) {
+      expect(card.querySelector('.skill-icon svg[aria-hidden="true"]')).not.toBeNull();
+    }
+  });
+
   it('should render accessible LinkedIn, GitHub, and email links with icons', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
