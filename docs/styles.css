@@ -97,16 +97,18 @@ a:focus-visible {
 }
 
 .brand-symbol {
-  display: grid;
+  display: inline-flex;
   width: 34px;
   height: 34px;
-  place-items: center;
+  align-items: baseline;
+  justify-content: center;
   border-radius: 10px;
   background: var(--purple);
   color: white;
   font-size: 13px;
   font-weight: 800;
   letter-spacing: -.06em;
+  line-height: 1;
 }
 
 .brand-symbol span {
