@@ -24,6 +24,6 @@ The portfolio uses `src/assets/image/andy_suit.jpg`, a compressed copy of the or
 
 ## Updating site content
 
-The portfolio sections are in `src/app/app.component.html`; site colors and responsive styles are in `src/styles.css`. The scroll-reveal effect is implemented in `src/assets/js/scroll-reveal.js` and respects reduced-motion preferences. The `Projects` section includes the Image Translator project, with a link to its GitHub repository.
+The portfolio sections are in `src/app/app.component.html`; site colors and responsive styles are in `src/styles.css`. The scroll-reveal effect is implemented in `src/assets/js/scroll-reveal.js` and respects reduced-motion preferences. The `Projects` section includes the Image Translator and DoConnect projects, each with a link to its GitHub repository.
 
-The hero's `Resume` action opens `src/assets/andy-liu-resume.pdf` in a new tab. Update this file and its matching `docs/assets/andy-liu-resume.pdf` copy when replacing the résumé.
+The hero's `Resume` action opens `src/assets/andy-liu-resume.pdf` in a new tab. Update this file and its matching `docs/assets/andy-liu-resume.pdf` copy when replacing the résumé. Email actions copy the contact address to the clipboard.

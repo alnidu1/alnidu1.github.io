@@ -172,7 +172,9 @@ a:focus-visible {
   color: var(--ink);
   font-size: clamp(11px, .85vw, 12px);
   font-weight: 700;
+  font-family: inherit;
   text-decoration: none;
+  cursor: pointer;
   transition: background .18s ease, border-color .18s ease;
 }
 
@@ -327,7 +329,8 @@ a:focus-visible {
   margin-top: 27px;
 }
 
-.hero-socials a {
+.hero-socials a,
+.hero-socials button {
   display: inline-flex;
   min-height: 36px;
   align-items: center;
@@ -335,10 +338,19 @@ a:focus-visible {
   color: #9693a7;
   font-size: clamp(12px, .9vw, 14px);
   font-weight: 600;
+  font-family: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.hero-socials a:hover {
+.hero-socials button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.hero-socials a:hover,
+.hero-socials button:hover {
   color: white;
 }
 
@@ -487,11 +499,17 @@ a:focus-visible {
 
 .inline-link {
   display: inline-block;
+  border: 0;
   margin-top: 4px;
+  padding: 0;
+  background: transparent;
   color: var(--purple-dark);
   font-size: 12px;
   font-weight: 750;
+  font-family: inherit;
   text-decoration: none;
+  text-align: left;
+  cursor: pointer;
 }
 
 .inline-link span {
@@ -515,6 +533,10 @@ a:focus-visible {
   border-radius: 10px;
   padding: 25px 27px;
   background: var(--white);
+}
+
+.project-card + .project-card {
+  margin-top: 14px;
 }
 
 .project-card-main {
@@ -928,11 +950,43 @@ a:focus-visible {
   border: 1px solid rgba(255, 255, 255, .55);
   border-radius: 5px;
   padding: 0 15px;
+  background: transparent;
   color: white;
   font-size: clamp(12px, .9vw, 14px);
   font-weight: 700;
+  font-family: inherit;
+  line-height: 1;
   text-decoration: none;
+  cursor: pointer;
   transition: color .18s ease, background .18s ease;
+}
+
+.copy-status {
+  position: fixed;
+  z-index: 30;
+  right: 16px;
+  bottom: 16px;
+  max-width: calc(100vw - 32px);
+  border-radius: 7px;
+  padding: 10px 14px;
+  background: var(--ink);
+  color: white;
+  font-size: 13px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity .18s ease, transform .18s ease;
+  visibility: hidden;
+}
+
+.copy-status[data-state] {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.copy-status[data-state="error"] {
+  background: #8f1d1d;
 }
 
 .contact-button:hover {
