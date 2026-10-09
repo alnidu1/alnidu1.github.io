@@ -433,6 +433,7 @@ a:focus-visible {
 
 .intro-section,
 .experience-section,
+.projects-section,
 .skills-section,
 .education-section,
 .contact-section {
@@ -462,7 +463,7 @@ a:focus-visible {
 }
 
 .intro-grid h2,
-.section-heading h2,
+.section-heading,
 .education-copy h2,
 .contact-card h2 {
   margin: 0;
@@ -502,7 +503,7 @@ a:focus-visible {
 }
 
 .projects-section {
-  background: var(--paper);
+  background: var(--white);
 }
 
 .project-empty-state {
@@ -546,10 +547,6 @@ a:focus-visible {
   justify-content: space-between;
   gap: 24px;
   margin-bottom: 28px;
-}
-
-.section-heading {
-  font-size: clamp(35px, 4vw, 45px) !important;
 }
 
 .skills-heading-note {
@@ -752,25 +749,46 @@ a:focus-visible {
 }
 
 .education-section {
-  padding-top: 0;
-  background: var(--paper);
+  background: #fff4eb;
 }
 
 .education-card {
-  position: relative;
   display: flex;
-  min-height: 212px;
+  min-height: 270px;
   align-items: center;
-  justify-content: space-between;
-  gap: 25px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
   overflow: hidden;
+  border: 1px solid #f0e3d7;
   border-radius: 12px;
-  padding: 32px 43px;
-  background: #f0eee8;
+  padding: 24px;
+  background: var(--white);
+  text-align: center;
 }
 
-.education-copy h2 span {
-  color: var(--purple);
+.education-logo {
+  display: grid;
+  width: 100px;
+  height: 82px;
+  flex: 0 0 auto;
+  place-items: center;
+}
+
+.education-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.education-copy h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(34px, 4vw, 45px);
+  font-weight: 750;
+  letter-spacing: -.065em;
+  line-height: 1.08;
 }
 
 .education-copy h2 .ut-orange {
@@ -784,28 +802,7 @@ a:focus-visible {
   line-height: 1.8;
 }
 
-.education-logo {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  width: 129px;
-  height: 115px;
-  flex: 0 0 129px;
-  place-items: center;
-  border: 1px solid #dfdcd4;
-  border-radius: 11px;
-  background: white;
-  box-shadow: 7px 7px 0 #dad7cf;
-}
-
-.education-logo img {
-  width: 76px;
-  height: 66px;
-  object-fit: contain;
-}
-
 .contact-section {
-  padding-top: 0;
   background: var(--paper);
 }
 
@@ -832,16 +829,6 @@ a:focus-visible {
   border: 1px solid rgba(255, 255, 255, .17);
   border-radius: 50%;
   content: '';
-}
-
-.contact-card .section-kicker {
-  position: relative;
-  z-index: 1;
-  color: #e5ddff;
-}
-
-.contact-card .section-kicker > span {
-  color: #c8b8ff;
 }
 
 .contact-card h2 {
@@ -1048,6 +1035,7 @@ a:focus-visible {
 
   .intro-section,
   .experience-section,
+  .projects-section,
   .skills-section,
   .education-section {
     padding: 65px 0;
@@ -1059,7 +1047,7 @@ a:focus-visible {
   }
 
   .intro-grid h2,
-  .section-heading h2,
+  .section-heading,
   .education-copy h2,
   .contact-card h2 {
     font-size: 39px;
@@ -1124,16 +1112,10 @@ a:focus-visible {
     margin-top: 17px;
   }
 
-  .education-section {
-    padding-top: 0;
-  }
-
   .education-card {
-    min-height: 230px;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 22px;
-    padding: 25px 22px;
+    min-height: 250px;
+    gap: 8px;
+    padding: 20px 22px;
   }
 
   .education-copy h2,
@@ -1142,23 +1124,8 @@ a:focus-visible {
   }
 
   .education-logo {
-    position: absolute;
-    right: 25px;
-    bottom: 26px;
     width: 82px;
-    height: 78px;
-    min-width: 82px;
-    min-height: 78px;
-    flex-basis: 78px;
-  }
-
-  .education-logo img {
-    width: 52px;
-    height: 48px;
-  }
-
-  .contact-section {
-    padding-top: 0;
+    height: 68px;
   }
 
   .contact-card {
