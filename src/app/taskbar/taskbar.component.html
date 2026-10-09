@@ -1,21 +1,31 @@
-<head>
+<div id="top" class="site-frame">
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="wordmark" href="#top" aria-label="Andy Liu home">
+        <span class="wordmark__mark">AL</span>
+        <span>Andy Liu<span class="wordmark__period">.</span></span>
+      </a>
 
-</head>
-<mat-sidenav-container fullscreen>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#writing">Writing</a>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+      </nav>
 
-    <mat-toolbar color="primary">
-      <span>Andy Profile</span>
-      <span class="spacer"></span>
-  
-      <button mat-button routerLink="/home" routerLinkActive="active-button" style="font-size: 20px;">Home</button>
-      <button mat-button routerLink="/about" routerLinkActive="active-button" style="font-size: 20px;">About Me</button>
-      <button mat-button routerLink="/education" routerLinkActive="active-button" style="font-size: 20px;">Education & Skills</button>
-      <button mat-button routerLink="/experience" routerLinkActive="active-button" style="font-size: 20px;">Experiences</button>
-      <button mat-button routerLink="/project" routerLinkActive="active-button" style="font-size: 20px;">Projects</button>
-    </mat-toolbar>
-  
+      <a class="header-contact" href="mailto:liuandy246@gmail.com">
+        Get in touch <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="page-shell">
     <router-outlet></router-outlet>
-  
-  </mat-sidenav-container>
-  
-  
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Made thoughtfully by Andy Liu.</span>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+</div>
