@@ -28,6 +28,9 @@ describe('AppComponent', () => {
 
     expect(compiled.querySelector('.main-nav a[href="#projects"]')?.textContent).toContain('Projects');
     expect(compiled.querySelector('#projects h2')?.textContent).toContain('Projects');
+    expect(compiled.querySelector('#projects h3')?.textContent).toContain('Image Translator');
+    expect(compiled.querySelector('#projects .project-link')?.getAttribute('href'))
+      .toBe('https://github.com/CS340-19/image_translator');
     expect(compiled.querySelector('.hero-resume-link')?.textContent).toContain('Resume');
     expect(compiled.querySelector('.hero-resume-link')?.getAttribute('href'))
       .toBe('assets/andy-liu-resume.pdf');

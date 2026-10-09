@@ -506,39 +506,109 @@ a:focus-visible {
   background: var(--white);
 }
 
-.project-empty-state {
+.project-card {
   display: flex;
-  align-items: center;
-  gap: 18px;
-  border: 1px dashed #d8d3e7;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+  border: 1px solid var(--line);
   border-radius: 10px;
-  padding: 23px 25px;
-  background: #fff;
+  padding: 25px 27px;
+  background: var(--white);
 }
 
-.project-empty-mark {
+.project-card-main {
+  min-width: 0;
+}
+
+.project-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.project-mark {
   display: grid;
   width: 46px;
   height: 46px;
   flex: 0 0 46px;
   place-items: center;
+  border: 1px solid #e4e1ef;
   border-radius: 10px;
-  background: #e8e2ff;
+  background: #f0edff;
   color: var(--purple-dark);
-  font-size: 16px;
-  font-weight: 750;
 }
 
-.project-empty-state h3 {
+.project-mark svg {
+  width: 23px;
+  height: 23px;
+}
+
+.project-eyebrow {
+  margin: 0 0 3px;
+  color: var(--purple-dark);
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: .1em;
+}
+
+.project-card h3 {
   margin: 0;
   color: var(--ink);
-  font-size: clamp(15px, 1.2vw, 18px);
+  font-size: clamp(18px, 1.5vw, 21px);
 }
 
-.project-empty-state p {
-  margin: 5px 0 0;
+.project-description {
+  max-width: 690px;
+  margin: 17px 0 0;
   color: var(--muted);
   font-size: clamp(13px, .95vw, 15px);
+  line-height: 1.8;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-tags li {
+  border-radius: 4px;
+  padding: 5px 8px;
+  background: #f5f3fb;
+  color: #5b45bd;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.project-link {
+  display: inline-flex;
+  min-height: 40px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid #ded9f1;
+  border-radius: 5px;
+  padding: 0 13px;
+  color: var(--purple-dark);
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: none;
+  transition: background .18s ease, border-color .18s ease;
+}
+
+.project-link:hover {
+  border-color: var(--purple);
+  background: #f0edff;
+}
+
+.project-link svg {
+  width: 16px;
+  height: 16px;
 }
 
 .section-header {
@@ -1165,16 +1235,15 @@ a:focus-visible {
 }
 
 @media (max-width: 580px) {
-  .project-empty-state {
+  .project-card {
     align-items: flex-start;
-    gap: 13px;
-    padding: 18px 16px;
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px 18px;
   }
 
-  .project-empty-mark {
-    width: 40px;
-    height: 40px;
-    flex-basis: 40px;
+  .project-description {
+    margin-top: 14px;
   }
 }
 

@@ -1,7 +1,7 @@
 (function () {
   const initializeScrollReveals = () => {
     const targets = document.querySelectorAll(
-      '.hero-card, .intro-grid > div, .experience-card, .project-empty-state, .skill-card, .education-card, .contact-card'
+      '.hero-card, .intro-grid > div, .experience-card, .project-card, .skill-card, .education-card, .contact-card'
     );
 
     if (!targets.length) {
